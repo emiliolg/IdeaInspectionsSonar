@@ -42,31 +42,21 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.Properties;
 import java.util.SortedMap;
-import java.util.TreeMap;
-
-import javax.xml.stream.XMLStreamException;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.CharEncoding;
-import org.codehaus.staxmate.in.SMInputCursor;
 
 import org.sonar.api.platform.ServerFileSystem;
-import org.sonar.api.profiles.RulesProfile;
 import org.sonar.api.resources.Java;
-import org.sonar.api.rules.Iso9126RulesCategories;
 import org.sonar.api.rules.Rule;
-import org.sonar.api.rules.RulePriority;
 import org.sonar.api.rules.RuleRepository;
 import org.sonar.api.rules.XMLRuleParser;
-import org.sonar.api.utils.SonarException;
 import org.sonar.api.utils.ValidationMessages;
-import org.sonar.plugins.ideainspections.IdeaImporter;
 
-import static org.sonar.plugins.ideainspections.IdeaConstants.*;
+import static org.sonar.plugins.ideainspections.IdeaConstants.REPOSITORY_KEY;
+import static org.sonar.plugins.ideainspections.IdeaConstants.REPOSITORY_NAME;
 
 public final class IdeaRepository
     extends RuleRepository
@@ -89,112 +79,54 @@ public final class IdeaRepository
 
     //~ Methods ........................................................................................................
 
-    public static void main(String[] args)
-        throws IOException
+    public static void loadDescriptions(final Iterable<Rule> rules)
     {
-        IdeaRepository repository = new IdeaRepository(null, new XMLRuleParser());
-        List<Rule>                    rules = repository.createRules();
-
         for (Rule rule : rules) {
-            System.out.println(rule.getKey() + " = " + rule.getName());
+            String description = loadDescription(rule);
+
+            if (description != null) {
+                rule.setDescription(description);
+            }
         }
     }
 
     @Override
     public List<Rule> createRules()
     {
-        RulesImporter importer = new RulesImporter();
+        final List<Rule> rules = new ArrayList<Rule>();
+        rules.addAll(extraRules().values());
+        rules.addAll(DefaultRules.get().values());
+        loadDescriptions(rules);
 
-        importer.importProfile(new InputStreamReader(getResourceAsStream("extra.xml")),
-                               ValidationMessages.create());
-        importer.loadDescriptions();
-        final List<Rule> rules = new ArrayList<Rule>(importer.getRules());
         if (fileSystem != null) {
             for (File userExtensionXml : fileSystem.getExtensions(REPOSITORY_KEY, "xml")) {
                 rules.addAll(xmlRuleParser.parse(userExtensionXml));
             }
         }
+
         return rules;
     }
 
-    private static InputStream getResourceAsStream(String resource)
+    static InputStream getResourceAsStream(String resource)
     {
         return IdeaRepository.class.getResourceAsStream(resource);
     }
 
-    //~ Inner Classes ..................................................................................................
-
-    private static class RulesImporter
-        extends IdeaImporter
+    private static String loadDescription(Rule rule)
     {
-        private final SortedMap<String,Rule> rules;
-        private final Properties names;
-
-        public RulesImporter()
-        {
-            super(null);
-            names = loadRuleNames();
-            rules = new TreeMap<String,Rule>();
+        try {
+            final InputStream input = getResourceAsStream("descriptions/" + rule.getKey() + ".html");
+            return input == null ? null : IOUtils.toString(input, CharEncoding.UTF_8);
         }
-
-        public Collection<Rule> getRules()
-        {
-            return rules.values();
+        catch (IOException e) {
+            return null;
         }
+    }
 
-        @Override
-        protected void importRule(RulesProfile profile, ValidationMessages messages, boolean enabled, String key,
-                                  RulePriority priority, SMInputCursor options)
-            throws XMLStreamException
-        {
-            if (!rules.containsKey(key)) {
-                String name = names.getProperty(key);
-
-                if (name == null) {
-                    name = key;
-                }
-                Rule rule =
-                    Rule.create(REPOSITORY_KEY, key, name).setConfigKey(key).setPriority(priority)
-                        .setRulesCategory(Iso9126RulesCategories.RELIABILITY);
-
-                rules.put(key,rule);
-            }
-        }
-
-        private Properties loadRuleNames()
-        {
-            Properties result = new Properties();
-
-            try {
-                result.load(getResourceAsStream("names.properties"));
-            }
-            catch (IOException e) {
-                throw new SonarException("Fail to load inspections names", e);
-            }
-
-            return result;
-        }
-
-        public void loadDescriptions()
-        {
-            for (Rule rule : rules.values()) {
-                String description =
-                loadDescription(rule);
-                if (description != null) {
-                    rule.setDescription(description);
-                }
-            }
-        }
-
-        private String loadDescription(Rule rule)
-        {
-            try {
-                final InputStream input = getResourceAsStream("descriptions/" + rule.getKey() + ".html");
-                return input == null ? null : IOUtils.toString(input, CharEncoding.UTF_8);
-            }
-            catch (IOException e) {
-                return null;
-            }
-        }
+    private SortedMap<String, Rule> extraRules()
+    {
+        RulesImporter importer = new RulesImporter();
+        importer.importProfile(new InputStreamReader(getResourceAsStream("extra.xml")), ValidationMessages.create());
+        return importer.getRules();
     }
 }

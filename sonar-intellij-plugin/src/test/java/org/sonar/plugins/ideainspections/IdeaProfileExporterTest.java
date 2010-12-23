@@ -98,6 +98,8 @@ public class IdeaProfileExporterTest
                                          "BooleanMethodIsAlwaysInverted",
                                          "BooleanMethodIsAlwaysInverted").setConfigKey("BooleanMethodIsAlwaysInverted"),
                              RulePriority.MAJOR);
+        profile.activateRule(Rule.create(REPOSITORY_KEY, "BreakStatement", "BreakStatement").setConfigKey("BreakStatement"),
+                             RulePriority.MAJOR);
         return profile;
     }
 

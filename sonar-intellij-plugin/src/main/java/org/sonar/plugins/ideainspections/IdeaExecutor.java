@@ -118,7 +118,7 @@ public class IdeaExecutor
         //executor.setWatchdog(watchdog);
         try {
             LOG.info("About to execute: \n" + cmdLine.toString());
-            //executor.execute(cmdLine);
+            executor.execute(cmdLine);
         }
         catch (Exception e) {
             throw new SonarException("Can not execute Idea Inspections", e);

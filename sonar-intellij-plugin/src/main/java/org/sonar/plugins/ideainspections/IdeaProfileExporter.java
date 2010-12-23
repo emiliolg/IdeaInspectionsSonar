@@ -44,12 +44,15 @@ import org.sonar.api.profiles.ProfileExporter;
 import org.sonar.api.profiles.RulesProfile;
 import org.sonar.api.resources.Java;
 import org.sonar.api.rules.ActiveRule;
+import org.sonar.api.rules.Rule;
 import org.sonar.api.rules.RuleParam;
 import org.sonar.api.utils.SonarException;
+import org.sonar.plugins.ideainspections.rules.DefaultRules;
 
 import java.io.IOException;
 import java.io.Writer;
-import java.util.List;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 import static org.sonar.plugins.ideainspections.IdeaConstants.*;
 
@@ -81,8 +84,22 @@ public class IdeaProfileExporter
         try {
             appendXmlHeader(writer);
 
+            SortedMap<String, Rule> defaultRules = new TreeMap<String, Rule>(DefaultRules.get());
+
             for (ActiveRule activeRule : profile.getActiveRulesByRepository(REPOSITORY_KEY)) {
-                appendRule(writer, activeRule);
+                final Rule            rule = activeRule.getRule();
+                final boolean hasParameters= !rule.getParams().isEmpty();
+                if (defaultRules.remove(rule.getKey()) == null || hasParameters) {
+                    appendRule(writer, rule, true, !hasParameters);
+
+                    if (hasParameters) {
+                        appendParameters(writer, activeRule);
+                    }
+                }
+            }
+
+            for (Rule rule : defaultRules.values()) {
+                appendRule(writer, rule, false, true);
             }
 
             appendXmlFooter(writer);
@@ -106,34 +123,34 @@ public class IdeaProfileExporter
         writer.append("</inspections>");
     }
 
-    private void appendRule(Writer writer, ActiveRule activeRule)
+    private void appendRule(Writer writer, Rule rule, boolean enabled, boolean close)
         throws IOException
     {
         writer.append("<").append(INSPECTION_TOOL_NODE);
-        appendAttribute(writer, INSPECTION_CLASS_ATTR, activeRule.getConfigKey());
-        appendAttribute(writer, INSPECTION_LEVEL_ATTR, IdeaUtils.toSeverity(activeRule.getPriority()));
-        appendAttribute(writer, INSPECTION_ENABLED, Boolean.toString(true));
-
-        final List<RuleParam> options = activeRule.getRule().getParams();
-
-        if (options.isEmpty()) {
+        appendAttribute(writer, INSPECTION_CLASS_ATTR, rule.getConfigKey());
+        appendAttribute(writer, INSPECTION_LEVEL_ATTR, IdeaUtils.toSeverity(rule.getPriority()));
+        appendAttribute(writer, INSPECTION_ENABLED, Boolean.toString(enabled));
+        if (close)
             writer.append("/>\n");
-        }
-        else {
-            writer.append(">\n");
-            for (RuleParam option : options) {
-                String value = activeRule.getParameter(option.getKey());
+    }
 
-                if (StringUtils.isNotBlank(value)) {
-                    writer.append("<").append(INSPECTION_OPTION_NODE);
-                    appendAttribute(writer, INSPECTION_OPTION_NAME_ATTR, option.getKey());
-                    appendAttribute(writer, INSPECTION_OPTION_VALUE_ATTR, value);
-                    writer.append("/>\n");
-                }
+    private void appendParameters(Writer writer, ActiveRule activeRule)
+        throws IOException
+    {
+        writer.append(">\n");
+
+        for (RuleParam option : activeRule.getRule().getParams()) {
+            String value = activeRule.getParameter(option.getKey());
+
+            if (StringUtils.isNotBlank(value)) {
+                writer.append("<").append(INSPECTION_OPTION_NODE);
+                appendAttribute(writer, INSPECTION_OPTION_NAME_ATTR, option.getKey());
+                appendAttribute(writer, INSPECTION_OPTION_VALUE_ATTR, value);
+                writer.append("/>\n");
             }
-
-            writer.append("</").append(INSPECTION_TOOL_NODE).append(">\n");
         }
+
+        writer.append("</").append(INSPECTION_TOOL_NODE).append(">\n");
     }
 
     private void appendAttribute(Writer writer, String attr, String value)

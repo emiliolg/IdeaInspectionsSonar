@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems is_local_tool="false">
+  <problem>
+    <file>file://$PROJECT_DIR$/src/World.java</file>
+    <line>1</line>
+    <module>TestModule</module>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="class" FQNAME="World">
+      <entry_point TYPE="package" FQNAME="default package">
+        <entry_point TYPE="project" FQNAME="TestProject" />
+      </entry_point>
+    </entry_point>
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="packageLocal" />
+    </hints>
+    <description>Can be package local</description>
+  </problem>
+</problems>
+

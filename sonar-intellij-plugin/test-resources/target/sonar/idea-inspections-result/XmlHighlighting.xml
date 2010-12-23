@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems is_local_tool="false">
+  <problem>
+    <file>file://$PROJECT_DIR$/ideainspections-conf.xml</file>
+    <line>2</line>
+    <module>TestModule</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/ideainspections-conf.xml">
+      <entry_point TYPE="dir" FQNAME="$PROJECT_DIR$">
+        <entry_point TYPE="module" FQNAME="TestModule">
+          <entry_point TYPE="project" FQNAME="TestProject" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Xml Highlighting</problem_class>
+    <hints />
+    <description>URI is not registered (Settings | IDE Settings | Resources) #loc</description>
+  </problem>
+</problems>
+

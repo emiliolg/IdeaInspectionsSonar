@@ -1,0 +1,673 @@
+<inspections profile="ideainspections">
+  <group name="Internationalization issues">
+    <inspection shortName="LossyEncoding" displayName="Lossy encoding">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+  This inspection warns you of characters that current encoding is incapable to represent.&lt;br&gt;
+  E.g. when you are trying to type international characters in an &lt;b&gt;US-ASCII&lt;/b&gt;-encoded file.&lt;br&gt;
+  Typically, you would fix this by changing the file encoding,
+  either by specifying the encoding directly in the file, e.g. by editing &lt;b&gt;encoding=&lt;/b&gt; attribute in the XML prolog of XML file,
+  or configuring the &lt;b&gt;Settings|General|File Encoding|Default encoding&lt;/b&gt; setting,
+  or by setting up the file/directory encoding in the &lt;b&gt;Settings|File/Directory Options|File Encodings&lt;/b&gt;.
+&lt;/font&gt;
+&lt;p&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 7&lt;/font&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="">
+    <inspection shortName="Dependency" displayName="Illegal package dependencies">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+This inspection detects violations of rules specified for dependency validation.&lt;br&gt;&lt;br&gt;
+Use the &quot;Configure dependency rules&quot; button below to customize validation rules.
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EqualsAndHashcode" displayName="equals() and hashCode() not paired">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports classes that override method
+&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;equals()&lt;/font&gt;&lt;/b&gt; but do not override method
+&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;hashCode()&lt;/font&gt;&lt;/b&gt;, or vice versa, which could potentially lead to problems
+when class is added to a &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;Collection&lt;/font&gt;&lt;/b&gt;.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="SillyAssignment" displayName="Variable is assigned to itself">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;Detects assignments of a variable to itself, like:&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;a = a;&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="JavaDoc" displayName="Declaration has javadoc problems">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection points out the following javadoc comment flaws:&lt;br&gt;&lt;br&gt;
+&amp;nbsp;- no javadoc where it is required&lt;br&gt;
+&amp;nbsp;- required tag is missing&lt;br&gt;
+&amp;nbsp;- invalid or incomplete tag&lt;br&gt;
+&amp;nbsp;- javadoc description is missing or incomplete&lt;br&gt;&lt;br&gt;
+Use tabs and corresponding inspection options below, to define visibility scope where javadoc is required, as well as the
+required javadoc tags for classes, methods, fields and inner classes.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="WrongPackageStatement" displayName="Wrong package statement">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;Detects package statements that do not correspond to the project directory structure.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="AccessStaticViaInstance" displayName="Access static member via instance reference">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;Shows references to &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;static&lt;/font&gt;&lt;/b&gt; methods and fields
+via class instance rather than a class itself.&lt;/b&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="Deprecation" displayName="Deprecated API usage">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports where deprecated code is used in the specified inspection scope.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="JavadocReference" displayName="Declaration has problems in javadoc references">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection points out unresolved references inside javadoc&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="UNCHECKED_WARNING" displayName="Unchecked warning">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;&lt;b&gt;JDK 5.0 only.&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;Signals places where an unchecked warning is issued
+by the compiler, for example:&lt;/font&gt;
+&lt;pre&gt;&lt;code&gt;void f(HashMap map) {
+      map.put(&quot;key&quot;, &quot;value&quot;);
+}
+  &lt;/code&gt;
+    &lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="Verbose or redundant code constructs">
+    <inspection shortName="RedundantCast" displayName="Redundant type cast">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports unnecessary cast expressions.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="RedundantArrayCreation" displayName="Redundant array creation">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports unnecessary creation of array expression
+to be passed as an argument to varargs parameter.
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="RedundantTypeArguments" displayName="Redundant type arguments">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+This inspection reports all calls to parametrized methods where explicit argument types
+can be omitted, since they will be unambiguously inferred by compiler.&lt;br&gt;
+Such usages make code excessive and thus less readable.&lt;br&gt;&lt;br&gt;
+For example if you have a call to parametrized method like:
+&lt;pre&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;this&lt;/font&gt;&lt;/b&gt;.&amp;lt;String&amp;gt;addItem(&lt;font color=&quot;#008000&quot;&gt;&quot;&quot;&lt;/font&gt;);
+&lt;/pre&gt;
+- the usage of &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;&amp;lt;String&amp;gt;&lt;/font&gt;&lt;/b&gt; will be highlighted.&lt;br&gt;&lt;br&gt;
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+  </group>
+  <group name="Class structure">
+    <inspection shortName="FieldCanBeLocal" displayName="Field can be local">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+This inspection searches for redundant class fields that can be replaced with local variables.
+If all local usages of a field are preceded by assignments to that field, the
+field can be removed and its usages replaced with local variables.
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+  </group>
+  <group name="Code style issues">
+    <inspection shortName="LocalCanBeFinal" displayName="Local variable or parameter can be final">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports parameters or local variables, found in the specified inspection
+scope, that may have a &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;final&lt;/font&gt;&lt;/b&gt; modifier added.&lt;br&gt;&lt;br&gt;
+Use check boxes in the inspection options below, to define whether parameters or local variables (or both) are to be reported.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+  </group>
+  <group name="Declaration Redundancy">
+    <inspection shortName="UnnecessaryModuleDependencyInspection" displayName="Unnecessary module dependency">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection lists modules which contain redundant dependencies on other modules.
+  These dependencies can be safely removed.
+
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="CanBeFinal" displayName="Declaration can have final modifier">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports all fields, methods or classes, found in the specified inspection
+scope, that may have a &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;final&lt;/font&gt;&lt;/b&gt; modifier added to their declarations.&lt;br&gt;&lt;br&gt;
+Use check boxes in the inspection options below, to define which declarations are to be reported.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="RedundantSuppression" displayName="Redundant suppression">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports usages of
+  &lt;ul&gt;
+    &lt;li&gt;&lt;code&gt;@SuppressWarning&lt;/code&gt; annotation, or&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;// noinspection&lt;/code&gt; line comment, or&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;/** noinspection */&lt;/code&gt; JavaDoc comment&lt;/li&gt;
+  &lt;/ul&gt;
+
+  which can be safely removed because inspection they affect is no longer applicable in this context.
+ &lt;p&gt;
+For example:
+&lt;code&gt;&lt;pre&gt;
+&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;public class&lt;/font&gt;&lt;/b&gt; C {
+ // symbol is already private,
+ // but annotation is still around
+  @SuppressWarnings({&quot;WeakerAccess&quot;})
+ &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;private boolean&lt;/font&gt;&lt;/b&gt; CONST = &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;true&lt;/font&gt;&lt;/b&gt;;
+ &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;void&lt;/font&gt;&lt;/b&gt; f() {
+    CONST = &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;false&lt;/font&gt;&lt;/b&gt;;
+  }
+}
+&lt;/pre&gt;&lt;/code&gt;
+
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="WeakerAccess" displayName="Declaration access can be weaker">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports all fields, methods or classes, found in the specified inspection
+scope, that may have their access modifier narrowed down.&lt;br&gt;&lt;br&gt;
+Use check boxes in the inspection options below, to define rules for the modifier change suggestions.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="UnusedParameters" displayName="Unused method parameters">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports parameters that are not used by their methods and all method
+implementations/overriders.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="UnusedReturnValue" displayName="Unused method return value">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports methods which return values are never used in corresponding
+method calls.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="SameParameterValue" displayName="Actual method parameter is the same constant">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports methods where a value being passed to a particular parameter
+appears to be always the same constant.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="UnusedDeclaration" displayName="Unused declaration">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports classes, methods or fields in the specified inspection scope that
+are not used or not reachable from entry points.&lt;br&gt;&lt;br&gt;
+Use check boxes in the inspection options below, to specify what should be automatically assumed entry points. You will
+also have a possibility to add entry points manually when inspection results are ready.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="DuplicateThrows" displayName="Duplicate throws">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports duplicate classes in the method throws list.
+&lt;br&gt;For example:
+&lt;code&gt;&lt;pre&gt;
+&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;void&lt;/font&gt;&lt;/b&gt; f() &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;throws&lt;/font&gt;&lt;/b&gt; Exception, &lt;b&gt;&lt;font color=&quot;#800000&quot;&gt;Exception&lt;/font&gt;&lt;/b&gt; {
+}
+&lt;/pre&gt;&lt;/code&gt;
+&lt;br&gt;
+Also, inspection warns if you have declared two exceptions one of which subclasses another.
+ E.g.:
+&lt;code&gt;&lt;pre&gt;
+&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;void&lt;/font&gt;&lt;/b&gt; f() &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;throws&lt;/font&gt;&lt;/b&gt; &lt;b&gt;&lt;font color=&quot;#800000&quot;&gt;IOException&lt;/font&gt;&lt;/b&gt;, Exception {
+}
+&lt;/pre&gt;&lt;/code&gt;
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="RedundantThrows" displayName="Redundant throws clause">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports exceptions that are declared in a method&apos;s signature but never
+thrown by the method itself or its implementations/derivatives. Since this inspection requires global code analysis,
+it is only available in batch inspection mode. A limited version for use in editor highlighting is available as
+&lt;nobr&gt;&lt;i&gt;General | Redundant throws declaration&lt;/i&gt;.&lt;/nobr&gt;&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="RedundantThrowsDeclaration" displayName="Redundant throws declaration">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports exceptions that are declared in a method&apos;s signature but never thrown by the method itself.
+Only final, private or static methods are analyzed. For other methods, global code analysis is required.
+For batch inspections, this can be achieved using &lt;nobr&gt;&lt;i&gt;Declaration Redundancy | Redundant throws clause&lt;/i&gt;.&lt;/nobr&gt;&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="EmptyMethod" displayName="Empty method">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports methods where:&lt;br&gt;&lt;br&gt;
+&amp;nbsp;- method is empty OR&lt;br&gt;
+&amp;nbsp;- all implementations of interface method are empty OR&lt;br&gt;
+&amp;nbsp;- method is empty itself and is overridden only by empty methods&lt;br&gt;&lt;br&gt;
+Note that a method containing only the &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;super()&lt;/font&gt;&lt;/b&gt;
+call and passing its own parameter is also considered empty.
+&lt;br&gt;&lt;br&gt;
+This inspection is automatically suppressed for methods annotated with special annotations,
+for example, EJB annotations javax.ejb.Init and javax.ejb.Remove. Additional annotations
+can be configured below.
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="UNUSED_SYMBOL" displayName="Unused symbol">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+Detects local variables and private members that are declared but not used,
+never accessed for reading or not initialized in a class.
+&lt;br&gt;Can ignore members that are annotated in a special way, for example, by EJB annotation javax.ejb.EJB.
+Additional annotations can be configured below.
+&lt;br&gt;
+  The &lt;b&gt;Report unused parameters in non-private method&lt;/b&gt; setting is used to
+  detect unused parameters of public/protected/package local methods which are neither overridden nor override other method.
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="UnusedLibrary" displayName="Unused library">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports libraries attached to the specified inspection scope that
+are not used directly from code.&lt;br&gt;&lt;br&gt;
+&lt;/font&gt;
+&lt;p&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 7&lt;/font&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="SameReturnValue" displayName="Method returns the same value">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports methods and method hierarchies where the return value appears to
+be always the same constant.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+  </group>
+  <group name="Modularization issues">
+    <inspection shortName="InconsistentLanguageLevel" displayName="Inconsistent language level settings">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection lists modules which depend on other modules with higher language level. Such dependencies should be broken off.
+&lt;/font&gt;
+&lt;p&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 9&lt;/font&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+  </group>
+  <group name="General">
+    <inspection shortName="Annotator" displayName="Annotator">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;Allows to see problems reported by language annotators in the results of Analyze | Inspect Code.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="TestOnlyProblems" displayName="@TestOnly method call in production code">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+  This inspection reports usages of &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;@TestOnly&lt;/font&gt;&lt;/b&gt;-annotated methods in production code.
+  &lt;br&gt;The problems are not reported if such method is called from
+  &lt;ul&gt;
+    &lt;li&gt;code under &apos;Test Sources&apos; folder
+    &lt;li&gt;test-class (JUnit/TestNG)
+    &lt;li&gt;another &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;@TestOnly&lt;/font&gt;&lt;/b&gt;-annotated method
+  &lt;/ul&gt;
+&lt;/font&gt;
+&lt;p&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 7&lt;/font&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="XmlHighlighting" displayName="Xml Highlighting">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;Allows to see xml stuff validation problems in the results of Analyze | Inspect Code.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="SyntaxError" displayName="Syntax error">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;Allows to see syntax errors in the results of Analyze | Inspect Code.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="DefaultFileTemplate" displayName="Default File Template Usage">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspections reports usages of the default file templates for
+  &lt;ul&gt;
+    &lt;li&gt;File Header,&lt;/li&gt;
+    &lt;li&gt;Overridden/implemented ot created method body, and&lt;/li&gt;
+    &lt;li&gt;Generated Catch block section.&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;p&gt;
+Also, the inspection proposes to change default file template usages to the actual file templates configured in Settings|IDE|File Templates. 
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="Probable bugs">
+    <inspection shortName="ConstantConditions" displayName="Constant conditions &amp; exceptions">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports those conditions in the specified inspection scope that are
+always &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;true&lt;/font&gt;&lt;/b&gt; or &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;false&lt;/font&gt;&lt;/b&gt;,
+as well as points out where a &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;RuntimeException&lt;/font&gt;&lt;/b&gt; may be thrown,
+based on data flow analysis of the code.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="UnusedAssignment" displayName="Unused assignment">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection points out the cases where a variable value
+is never used after its assignment, i.e.:&lt;br&gt;
+&amp;nbsp;- the variable never gets read after assignment OR&lt;br&gt;
+&amp;nbsp;- the value is always overwritten with another assignment before the next variable read OR&lt;br&gt;
+&amp;nbsp;- the variable initializer is redundant (for one of the above two reasons) OR&lt;br&gt;
+&amp;nbsp;- the variable is never used.&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="NullableProblems" displayName="@NotNull/@Nullable problems">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports problems related to
+  &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;@org.jetbrains.annotations.Nullable&lt;/font&gt;&lt;/b&gt; and &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;@org.jetbrains.annotations.NotNull&lt;/font&gt;&lt;/b&gt;
+  annotations usage.
+  &lt;br&gt;
+
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="SuspiciousNameCombination" displayName="Suspicious variable/parameter name combination">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;Reports assignments and function calls where the name of the variable to which
+  a value is assigned or the function parameter does not seem to match the name of the value assigned to it.
+  For example: &lt;br&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;int x = 0;&lt;br&gt;int y = x;&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+  or
+  &lt;br&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;int x = 0, y = 0;&lt;br&gt;Rectangle rc = new Rectangle(y, x, 20, 20);&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+  &lt;p&gt;The configuration pane allows to specify the names which should not be used together: the error is reported
+  if the parameter name or assignment target name contains words from one group and the name of the assigned or passed
+  variable contains words from a different group.&lt;/p&gt;
+  &lt;/font&gt;&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="SuspiciousMethodCalls" displayName="Suspicious collections method calls">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+This inspection reports method calls to parameterized collections, where actual argument type does not
+correspond to the collection&apos;s elements type.&lt;br&gt;&lt;br&gt;
+For example if you have the following code:&lt;br&gt;
+&lt;/font&gt;
+&lt;pre&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;List&amp;lt;Integer&amp;gt; list = getListOfElements();
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;list.remove(&quot;&quot;);
+&lt;/pre&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+- the call to &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;remove()&lt;/font&gt;&lt;/b&gt; will be highlighted.&lt;br&gt;
+&lt;/font&gt;
+
+&lt;p&gt;
+  &lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+  The option &apos;&lt;b&gt;Report suspicious but possibly correct method calls&lt;/b&gt;&apos; makes it possible to ignore
+  potentially correct code, like this:&lt;br&gt;
+  &lt;/font&gt;
+
+  &lt;pre&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Number number = &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;new&lt;/font&gt;&lt;/b&gt; Integer(&lt;font color=&quot;#0000FF&quot;&gt;0&lt;/font&gt;);
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;list.remove(number));
+  &lt;/pre&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+  </group>
+  <group name="Numeric issues">
+    <inspection shortName="NumericOverflow" displayName="Numeric overflow">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection checks for expressions which overflow during computation, i.e.:&lt;br&gt;
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;a = 1.0/0.0;&lt;/font&gt;&lt;/b&gt;
+
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+  </group>
+  <group name="HTML">
+    <inspection shortName="HtmlUnknownAttribute" displayName="Unknown HTML tag attribute">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection highlight unknown HTML tag attributes as invalid and provides an ability to mark
+  such attributes as Custom to not highlight them as invalid.&lt;br&gt;
+&lt;/font&gt;
+&lt;p&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 7&lt;/font&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="HtmlExtraClosingTag" displayName="Extra closing tag for empty element">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection spots extra closing tag for the empty elements like IMG or BR.&lt;br&gt;
+&lt;/font&gt;
+&lt;p&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 7&lt;/font&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="CheckValidXmlInScriptTagBody" displayName="Malformed content of &lt;script&gt; tag">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection checks that the &lt;b&gt;script&lt;/b&gt; tag content is valid XML.&lt;br&gt;
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="HtmlUnknownTag" displayName="Unknown HTML tag">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection highlights unknown HTML tags and provides an ability to mark such tags as Custom to
+  not highlight them as unknown in future.&lt;br&gt;
+&lt;/font&gt;
+&lt;p&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 7&lt;/font&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="CheckEmptyScriptTag" displayName="Empty tag">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;Reports empty tags (like &lt;b&gt;script&lt;/b&gt;) that do not work in some browsers.
+  The validation works in html or jsp file types.&lt;br&gt;
+&lt;/font&gt;
+&lt;p&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 7&lt;/font&gt;&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RequiredAttributes" displayName="Missing required attribute">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection reports XML/HTML tags with missing mandatory attributes.
+  You can specify attribute names that should not be reported. 
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+  </group>
+  <group name="Imports">
+    <inspection shortName="UNUSED_IMPORT" displayName="Unused import (editor light)">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+  This inspection reports redundant import statements during editor highlighting only (does not require additional calculations). 
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="XML">
+    <inspection shortName="CheckXmlFileWithXercesValidator" displayName="File does not pass external validation">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;Thoroughly checks XML files for DTD / schema compliance using Xerces validator.
+  The validation works in XML or XHTML file types.&lt;br&gt;
+&lt;/font&gt;
+&lt;p&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 7&lt;/font&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="XmlUnboundNsPrefix" displayName="Unbound XML namespace prefix">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection checks for unbound namespace prefixes in XML
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="XmlDuplicatedId" displayName="Unresolved or duplicate ID">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection checks for duplicate &quot;id&quot; attributes in XML.
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="CheckTagEmptyBody" displayName="XML tag empty body">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;Reports &lt;b&gt;empty&lt;/b&gt; tag body.
+  The validation works in XML / JSP / JSPX / HTML/ XHTML file types.&lt;br&gt;
+&lt;/font&gt;
+&lt;p&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 7&lt;/font&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="XmlWrongRootElement" displayName="Wrong root element">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;This inspection checks if root tag name is the same as in &amp;lt;doctype&amp;gt;.&lt;br&gt;
+&lt;/font&gt;
+&lt;p&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 7&lt;/font&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="CheckDtdRefs" displayName="Unresolved DTD reference">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;Checks consistency of &lt;b&gt;DTD&lt;/b&gt; specific references, e.g. references to XML entity or to DTD element declaration.
+  The validation works in DTD or XML file types.&lt;br&gt;
+&lt;/font&gt;
+&lt;p&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 7&lt;/font&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="Concurrency annotation issues">
+    <inspection shortName="StaticGuardedByInstance" displayName="Static member guarded by instance field or this">&lt;html&gt;
+&lt;body&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td valign=&quot;top&quot; height=&quot;150&quot;&gt;
+            &lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+                This inspection reports any @net.jcip.annotations.GuardedBy annotations on static fields or methods,
+                where
+                the guard is either a non-static field or &apos;this&apos;. Guarding a static by a non-static may result in
+                excessive
+                concurrency, multiple threads may be able to access the guarded field simultaneously, by locking in
+                different
+                object contexts.
+            &lt;/font&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td height=&quot;20&quot;&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 9&lt;/font&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="NonFinalGuard" displayName="Non-final @GuardedBy field">&lt;html&gt;
+&lt;body&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td valign=&quot;top&quot; height=&quot;150&quot;&gt;
+            &lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+                This inspection reports any @net.jcip.annotations.GuardedBy annotations where the guarding field
+                is not final. Gaurding on a non-final field may result in unexpected race conditions, as locks will
+                be held on the value of the field (which may change), rather than the field itself.
+            &lt;/font&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td height=&quot;20&quot;&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 9&lt;/font&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="FieldAccessNotGuarded" displayName="Unguarded field access">&lt;html&gt;
+&lt;body&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td valign=&quot;top&quot; height=&quot;150&quot;&gt;
+            &lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+                This inspection reports any accesses of fields declared as @net.jcip.annotations.GuardedBy
+                which are are not guarded by an appropriate synchronization structure.
+            &lt;/font&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td height=&quot;20&quot;&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 9&lt;/font&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="InstanceGuardedByStatic" displayName="Instance member guarded by static field">&lt;html&gt;
+&lt;body&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td valign=&quot;top&quot; height=&quot;150&quot;&gt;
+            &lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+                This inspection reports any @net.jcip.annotations.GuardedBy annotations on instance fields or methods,
+                where
+                the guard is a static field. Guarding a non-static by a static may result in excessive lock contention,
+                as access to each locked field in any object instance will prevent simultaneous access to that field in
+                every object
+                instance.
+            &lt;/font&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td height=&quot;20&quot;&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 9&lt;/font&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="NonFinalFieldInImmutable" displayName="Non-final field in @Immutable class">&lt;html&gt;
+&lt;body&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td valign=&quot;top&quot; height=&quot;150&quot;&gt;
+            &lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+                This inspection reports any non-final field in a class with annotation
+                @net.jcip.annotations.Immutable. This violates the contract of the @Immutable
+                annotation.
+            &lt;/font&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td height=&quot;20&quot;&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 9&lt;/font&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="UnknownGuard" displayName="Unknown @GuardedBy field">&lt;html&gt;
+&lt;body&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td valign=&quot;top&quot; height=&quot;150&quot;&gt;
+            &lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+                This inspection reports any @net.jcip.annotations.GuardedBy annotations where the guarding field
+                is unknown.
+            &lt;/font&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td height=&quot;20&quot;&gt;&lt;font face=&quot;verdana&quot; size=&quot;-2&quot;&gt;New in 9&lt;/font&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="J2SDK5.0 specific issues and migration aids">
+    <inspection shortName="Since15" displayName="Usages of API documented as @since 1.5(1.6)">&lt;html&gt;
+&lt;body&gt;
+&lt;font face=&quot;verdana&quot; size=&quot;-1&quot;&gt;
+This inspection finds all usages of methods that have &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;@since 1.5&lt;/font&gt;&lt;/b&gt; tag in
+their documentation.&lt;br&gt;&lt;br&gt;
+This may be useful when development is performed under J2SDK 5.0, while the target platform for production is
+still J2SDK 1.4.&lt;br&gt;&lt;br&gt;
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+  </group>
+</inspections>

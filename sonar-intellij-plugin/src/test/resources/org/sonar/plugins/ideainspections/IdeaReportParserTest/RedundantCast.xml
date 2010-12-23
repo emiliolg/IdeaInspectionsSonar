@@ -1,0 +1,376 @@
+
+<problems is_local_tool="true">
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>467</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.function_header_return function_header()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>587</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.declaration_return declaration()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>689</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.declaration_return declaration()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>715</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.declaration_return declaration()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>613</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.declaration_return declaration()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>1059</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.declarator_return declarator(java.lang.Object type)">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;raw_declarator22.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>2021</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.struct_declaration_return struct_declaration()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>1995</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.struct_declaration_return struct_declaration()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>3767</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.type_name_return type_name()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>3788</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.type_name_return type_name()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;d.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>3860</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.abstract_declarator_return abstract_declarator(java.lang.Object type)">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;raw_abstract_declarator93.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem></problems>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>467</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.function_header_return function_header()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>613</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.declaration_return declaration()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>715</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.declaration_return declaration()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>587</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.declaration_return declaration()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>689</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.declaration_return declaration()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>1059</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.declarator_return declarator(java.lang.Object type)">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;raw_declarator22.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>2021</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.struct_declaration_return struct_declaration()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>1995</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.struct_declaration_return struct_declaration()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>3788</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.type_name_return type_name()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;d.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>3767</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.type_name_return type_name()">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;t.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/target/generated-sources/antlr3/elg/conj/C.java</file>
+  <line>3860</line>
+  <module>conj</module>
+  <package>elg.conj</package>
+  <entry_point TYPE="method" FQNAME="elg.conj.C elg.conj.C.abstract_declarator_return abstract_declarator(java.lang.Object type)">
+    <entry_point TYPE="class" FQNAME="elg.conj.C">
+      <entry_point TYPE="package" FQNAME="elg.conj">
+        <entry_point TYPE="package" FQNAME="elg">
+          <entry_point TYPE="project" FQNAME="conj" />
+        </entry_point>
+      </entry_point>
+    </entry_point>
+  </entry_point>
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+  <description>Casting &lt;code&gt;raw_abstract_declarator93.tree&lt;/code&gt; to &lt;code&gt;Node&lt;/code&gt; is redundant</description>
+</problem></problems>

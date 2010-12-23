@@ -1,0 +1,20 @@
+<profile>
+    <name>Sonar way</name>
+    <language>java</language>
+    <rules>
+        <rule>
+            <repositoryKey>ideainspections</repositoryKey>
+            <key>EqualsAndHashcode</key>
+        </rule>
+        <rule>
+            <repositoryKey>ideainspections</repositoryKey>
+            <key>ConstantConditions</key>
+            <parameters>
+                <parameter>
+                    <key>SUGGEST_NULLABLE_ANNOTATIONS</key>
+                    <value>false</value>
+                </parameter>
+            </parameters>
+        </rule>
+    </rules>
+</profile>

@@ -40,6 +40,7 @@ package org.sonar.plugins.ideainspections;
 import org.sonar.api.Plugin;
 import org.sonar.api.Properties;
 import org.sonar.api.Property;
+import org.sonar.plugins.ideainspections.rules.IdeaRepository;
 
 import java.util.Arrays;
 import java.util.List;

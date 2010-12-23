@@ -35,7 +35,7 @@
  * License along with Sonar; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.ideainspections;
+package org.sonar.plugins.ideainspections.rules;
 
 import java.io.File;
 import java.io.IOException;
@@ -64,6 +64,7 @@ import org.sonar.api.rules.RuleRepository;
 import org.sonar.api.rules.XMLRuleParser;
 import org.sonar.api.utils.SonarException;
 import org.sonar.api.utils.ValidationMessages;
+import org.sonar.plugins.ideainspections.IdeaImporter;
 
 import static org.sonar.plugins.ideainspections.IdeaConstants.*;
 

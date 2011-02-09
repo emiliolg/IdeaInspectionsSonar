@@ -39,6 +39,8 @@ package org.sonar.plugins.ideainspections;
 
 import java.io.File;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -81,26 +83,47 @@ public class IdeaSensor
                (!profile.getActiveRulesByPlugin(REPOSITORY_KEY).isEmpty() || project.getReuseExistingRulesConfig());
     }
 
+    static File theReportDir;
+
     public void analyse(Project project, SensorContext context)
     {
-        File reportDir = executor.execute();
 
-        IdeaReportParser parser = new IdeaReportParser(reportDir);
-        parser.parseAll();
+        final boolean runOnce = executor.isRunOnce();
+        File reportDir = runOnce ?theReportDir:null;
 
-
-        final Collection<IdeaReportParser.Violation> violations = parser.getViolations();
-        if (!violations.isEmpty()) {
-            LOG.info("Found "+ violations.size() + " violations");
-        }
-        for (IdeaReportParser.Violation v : violations) {
-            Rule     rule = ruleFinder.findByKey(REPOSITORY_KEY, v.getType());
-            Resource resource = context.getResource(new JavaFile(v.getSonarJavaFileKey()));
-            if (resource != null) {
-                Violation violation =
-                    Violation.create(rule, resource).setLineId(v.getLine()).setMessage(v.getDescription());
-                context.saveViolation(violation);
+        if(reportDir == null) {
+            reportDir = executor.execute();
+            if(runOnce) {
+                theReportDir = reportDir;
             }
+        }
+
+        if (reportDir != null) {
+            IdeaReportParser parser = new IdeaReportParser(reportDir);
+            parser.parseAll();
+
+
+            final Collection<IdeaReportParser.Violation> violations = parser.getViolations();
+            if (!violations.isEmpty()) {
+                LOG.info("Found "+ violations.size() + " violations");
+            }
+            final Set<IdeaReportParser.Violation> reported = new HashSet<IdeaReportParser.Violation>();
+            for (IdeaReportParser.Violation v : violations) {
+
+                if(String.valueOf(v.getModule()).equals(project.getName()) && !reported.contains(v)) {
+                    reported.add(v);
+                    Rule     rule = ruleFinder.findByKey(REPOSITORY_KEY, v.getType());
+                    Resource resource = context.getResource(new JavaFile(v.getSonarJavaFileKey()));
+
+                    if (resource != null) {
+                        Violation violation =
+                            Violation.create(rule, resource).setLineId(v.getLine()).setMessage(v.getDescription());
+                        context.saveViolation(violation);
+                    }
+                }
+            }
+        } else {
+            LOG.info("Skipping result processing");
         }
     }
 

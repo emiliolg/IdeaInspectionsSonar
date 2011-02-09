@@ -78,7 +78,8 @@ public class IdeaExecutorTest
         Project                        project = mock(Project.class);
 
         final HashMap<String, Object> map = new HashMap<String, Object>();
-        map.put(IdeaConstants.IDEA_HOME_KEY, "/Users/emilio/intellij");
+        map.put(IdeaConstants.IDEA_HOME_KEY, new File(System.getProperty("user.home"),"intellij").toString());
+        map.put(IdeaConstants.JDK_HOME_KEY, "/System/Library/Frameworks/JavaVM.framework/Home/");
 
         when(project.getConfiguration()).thenReturn(new MapConfiguration(map));
         when(project.getFileSystem()).thenReturn(new SimpleProjectFileSystem(new File(getBaseDir(), "test-resources")));

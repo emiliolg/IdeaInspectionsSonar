@@ -37,18 +37,16 @@
  */
 package org.sonar.plugins.ideainspections;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecutor;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.sonar.api.BatchExtension;
 import org.sonar.api.utils.SonarException;
 import org.sonar.api.utils.TimeProfiler;
+
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class IdeaExecutor
     implements BatchExtension
@@ -61,7 +59,6 @@ public class IdeaExecutor
     private final File profile;
     private final File project;
 
-    private final String javaHome;
     private final String jdkHome;
 
     private final String jdkName;
@@ -69,17 +66,18 @@ public class IdeaExecutor
 
     private final String memory;
     private final String permSize;
+    private final boolean runOnce;
 
     //~ Constructors ...................................................................................................
 
     public IdeaExecutor(IdeaConfiguration configuration)
     {
+        runOnce = configuration.isRunOnceParseMany();
         project = configuration.getIdeaProject();
         profile = configuration.getXMLDefinitionFile();
         reportDirectory = configuration.getReportDirectory();
         jdkName = configuration.getJdkName();
         jdkHome = configuration.getJdkHome();
-        javaHome = configuration.getJavaHome();
         memory = configuration.getMaxMemory();
         permSize = configuration.getPermSize();
         libDir = configuration.getInspectionsLibDir();
@@ -87,18 +85,30 @@ public class IdeaExecutor
         validate();
     }
 
+
     //~ Methods ........................................................................................................
+
+    public boolean isRunOnce() {
+        return runOnce;
+    }
 
     /**
      * Execute Idea Inspections and return the generated XML report.
+     * @return File a directory with the inspection results or null if the project was not found
      */
     public File execute()
     {
+        if(!project.exists()) {
+            LOG.info("Cannot find: " + project + ". Skipping...");
+            return null;
+        }
+
         TimeProfiler profiler =
             new TimeProfiler().start("Execute Idea Inspections " + IdeaVersion.getVersion());
 
-        CommandLine cmdLine = new CommandLine(javaHome + "/bin/java");
+        CommandLine cmdLine = new CommandLine(jdkHome + "/bin/java");
 
+        cmdLine.addArgument("-XX:-UseGCOverheadLimit");
         cmdLine.addArgument("-Xmx" + memory);
         cmdLine.addArgument("-XX:MaxPermSize=" + permSize);
         cmdLine.addArgument("-Xbootclasspath/a:" + bootJar.getPath());
@@ -133,10 +143,7 @@ public class IdeaExecutor
     {
         Exception e = null;
 
-        if (!project.exists()) {
-            e = new FileNotFoundException(project.getPath());
-        }
-        else if (!bootJar.exists()) {
+        if (!bootJar.exists()) {
             e = new FileNotFoundException(bootJar.getPath());
         }
         else if (!profile.exists()) {
@@ -151,14 +158,12 @@ public class IdeaExecutor
     private String buildClassPath()
     {
         StringBuilder result = new StringBuilder();
-
+        result.append(new File(jdkHome, "lib/tools.jar").getPath()); //In OSX this is a no-op
         for (String jar : jars) {
-            if (result.length() > 0) {
-                result.append(File.pathSeparatorChar);
-            }
-
+            result.append(File.pathSeparatorChar);
             result.append(new File(libDir, jar).getPath());
         }
+
 
         return result.toString();
     }

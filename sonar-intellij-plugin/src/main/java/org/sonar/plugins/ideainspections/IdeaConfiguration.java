@@ -154,13 +154,27 @@ public class IdeaConfiguration
         return new File(ideaHome, "lib").getPath();
     }
 
+    public boolean isRunOnceParseMany()
+    {
+        return !configuration.getString(IdeaConstants.IDEA_PROJECT_KEY, "").isEmpty();
+    }
+
     public File getIdeaProject()
     {
-        String projectFile = configuration.getString(IdeaConstants.IDEA_PROJECT_KEY, "");
-        if (projectFile.isEmpty()) {
-            projectFile = project.getArtifactId() + ".ipr";
+        final String projectPath = configuration.getString(IdeaConstants.IDEA_PROJECT_KEY, "");
+        final File result;
+        if (projectPath.isEmpty()) {
+            result = new File(project.getFileSystem().getBasedir(), project.getArtifactId() + ".ipr");
+        } else {
+            final File projectFile = new File(projectPath);
+            if (projectFile.isAbsolute()) {
+                result = projectFile;
+            }
+            else {
+                result = new File(project.getFileSystem().getBasedir(), projectPath);
+            }
         }
-        return new File(project.getFileSystem().getBasedir(), projectFile);
+        return result;
     }
 
 }

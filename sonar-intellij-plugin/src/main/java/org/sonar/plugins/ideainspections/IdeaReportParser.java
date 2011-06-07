@@ -189,6 +189,33 @@ class IdeaReportParser
             }
         }
 
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            Violation violation = (Violation) o;
+
+            if (line != violation.line) return false;
+            if (module != null ? !module.equals(violation.module) : violation.module != null) return false;
+            if (type != null ? !type.equals(violation.type) : violation.type!= null) return false;
+            final String myKey = getSonarJavaFileKey();
+            final String otherKey = violation.getSonarJavaFileKey();
+            if (myKey != null ? !myKey.equals(otherKey) : otherKey != null) return false;
+
+            return true;
+        }
+
+        @Override
+        public int hashCode() {
+            int result = line;
+            result = 31 * result + (module != null ? module.hashCode() : 0);
+            result = 31 * result + (type != null ? type.hashCode() : 0);
+            final String sonarJavaFileKey = getSonarJavaFileKey();
+            result = 31 * result + (sonarJavaFileKey != null ? sonarJavaFileKey.hashCode() : 0);
+            return result;
+        }
+
         private static final String FILE_PREFIX = "file://$PROJECT_DIR$/";
     }
 }

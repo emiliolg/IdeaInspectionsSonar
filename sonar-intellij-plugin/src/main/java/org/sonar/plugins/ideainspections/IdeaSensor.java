@@ -108,20 +108,30 @@ public class IdeaSensor
                 LOG.info("Found "+ violations.size() + " violations");
             }
             final Set<IdeaReportParser.Violation> reported = new HashSet<IdeaReportParser.Violation>();
+            int saved = 0, accepted = 0;
             for (IdeaReportParser.Violation v : violations) {
 
-                if(String.valueOf(v.getModule()).equals(project.getName()) && !reported.contains(v)) {
+                //We assume that the name of the idea module will be the same than the artifact id.
+                final String ideaModule = String.valueOf(v.getModule());
+                if(ideaModule.equals(project.getArtifactId()) && !reported.contains(v)) {
                     reported.add(v);
                     Rule     rule = ruleFinder.findByKey(REPOSITORY_KEY, v.getType());
                     Resource resource = context.getResource(new JavaFile(v.getSonarJavaFileKey()));
 
+                    ++accepted;
                     if (resource != null) {
+                        ++saved;
                         Violation violation =
                             Violation.create(rule, resource).setLineId(v.getLine()).setMessage(v.getDescription());
                         context.saveViolation(violation);
                     }
                 }
             }
+            if (!violations.isEmpty()) {
+                LOG.info("Accepted "+ accepted + " violations");
+                LOG.info("Saved "+ saved + " violations");
+            }
+
         } else {
             LOG.info("Skipping result processing");
         }
